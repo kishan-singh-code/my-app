@@ -45,6 +45,10 @@ export default function Textarea(props) {
     setText(event.target.value);
   };
 
+  const onCopy = () => {
+    navigator.clipboard.writeText(text);
+  };
+
   return (
     <>
       <div
@@ -94,6 +98,13 @@ export default function Textarea(props) {
             type="button"
           >
             Clear
+          </button>
+          <button
+            className="btn btn-primary my-1"
+            onClick={onCopy}
+            type="button"
+          >
+            Copy
           </button>
         </div>
       </div>
