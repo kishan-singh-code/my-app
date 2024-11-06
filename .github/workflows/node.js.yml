@@ -16,8 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        node-version: [18.x]  # Or use other Node.js versions like 16.x, if preferred
 
     steps:
     - uses: actions/checkout@v4
@@ -30,10 +29,13 @@ jobs:
     # Ensure package-lock.json is in sync with package.json
     - run: npm install
     
+    # Set NODE_OPTIONS to allow legacy OpenSSL provider (needed for Webpack on Node 17/18)
+    - run: export NODE_OPTIONS=--openssl-legacy-provider
+    
     # Install dependencies cleanly using npm ci
     - run: npm ci
     
-    - run: npm run build
+    - run: npm run build --if-present
     - run: npm test
 
     - name: Deploy with gh-pages
