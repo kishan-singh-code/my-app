@@ -29,8 +29,11 @@ jobs:
     # Ensure package-lock.json is in sync with package.json
     - run: npm install
     
+    # Update browserslist database to avoid warning
+    - run: npx browserslist@latest --update-db
+    
     # Set NODE_OPTIONS to allow legacy OpenSSL provider (needed for Webpack on Node 17/18)
-    - run: export NODE_OPTIONS=--openssl-legacy-provider
+    - run: echo "NODE_OPTIONS=--openssl-legacy-provider" >> $GITHUB_ENV
     
     # Install dependencies cleanly using npm ci
     - run: npm ci
