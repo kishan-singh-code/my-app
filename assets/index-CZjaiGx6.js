@@ -1,0 +1,3 @@
+import{r as n,j as t}from"./index-Ox7EXzvk.js";import{T as i}from"./index-DOqGydgx.js";import{T as u}from"./TextWorkbench-C1KUOrNv.js";import{S as l}from"./index-oRE4RCu4.js";const p=(e,r)=>{switch(r){case"characters":return Array.from(e).reverse().join("");case"words":return e.split(/(\s+)/).reverse().join("");case"lines":return e.split(/\r?\n/).reverse().join(`
+`);default:return e}},f=()=>{const[e,r]=n.useState(`one two three
+four five six`),[s,a]=n.useState("characters"),o=p(e,s);return t.jsx(i,{children:t.jsx(u,{input:e,output:o,onInputChange:r,controls:t.jsx(l,{value:s,options:[{label:"Characters",value:"characters"},{label:"Words",value:"words"},{label:"Lines",value:"lines"}],onChange:c=>a(c)}),onSwap:()=>r(o)})})};export{f as default};
