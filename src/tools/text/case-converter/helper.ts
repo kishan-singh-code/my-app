@@ -1,4 +1,4 @@
-export type CaseMode = "upper" | "lower" | "title" | "sentence" | "camel" | "kebab" | "snake";
+export type ICaseMode = "upper" | "lower" | "title" | "sentence" | "camel" | "kebab" | "snake";
 
 const wordsFrom = (value: string) =>
 	value
@@ -8,7 +8,7 @@ const wordsFrom = (value: string) =>
 
 const capitalize = (value: string) => (value ? `${value.charAt(0).toUpperCase()}${value.slice(1).toLowerCase()}` : value);
 
-export const convertCase = (value: string, mode: CaseMode) => {
+export const convertCase = (value: string, mode: ICaseMode) => {
 	switch (mode) {
 		case "upper":
 			return value.toUpperCase();

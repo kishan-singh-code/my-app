@@ -1,17 +1,17 @@
 import { createContext, useCallback, useContext, useState, type ReactNode } from "react";
 
-export type ThemeMode = "light" | "dark";
+export type IThemeMode = "light" | "dark";
 
-interface ThemeContextValue {
-	mode: ThemeMode;
-	setMode: (mode: ThemeMode) => void;
+interface IThemeContextValue {
+	mode: IThemeMode;
+	setMode: (mode: IThemeMode) => void;
 	toggleMode: () => void;
 }
 
 const storageKey = "toolhub-theme-mode";
-const ThemeContext = createContext<ThemeContextValue | null>(null);
+const ThemeContext = createContext<IThemeContextValue | null>(null);
 
-const getInitialTheme = (): ThemeMode => {
+const getInitialTheme = (): IThemeMode => {
 	if (typeof window === "undefined") {
 		return "light";
 	}
@@ -26,15 +26,15 @@ const getInitialTheme = (): ThemeMode => {
 };
 
 export const ThemeContextProvider = ({ children }: { children: ReactNode }) => {
-	const [mode, setModeState] = useState<ThemeMode>(getInitialTheme);
+	const [mode, setModeState] = useState<IThemeMode>(getInitialTheme);
 
-	const persistMode = (nextMode: ThemeMode) => {
+	const persistMode = (nextMode: IThemeMode) => {
 		if (typeof window !== "undefined") {
 			window.localStorage.setItem(storageKey, nextMode);
 		}
 	};
 
-	const setMode = useCallback((nextMode: ThemeMode) => {
+	const setMode = useCallback((nextMode: IThemeMode) => {
 		persistMode(nextMode);
 		setModeState(nextMode);
 	}, []);

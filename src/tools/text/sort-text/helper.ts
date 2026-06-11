@@ -1,6 +1,6 @@
-export type SortDirection = "asc" | "desc";
+export type ISortDirection = "asc" | "desc";
 
-export const sortLines = (value: string, direction: SortDirection, ignoreCase: boolean) => {
+export const sortLines = (value: string, direction: ISortDirection, ignoreCase: boolean) => {
 	const sortedLines = value.split(/\r?\n/).sort((leftLine, rightLine) => {
 		const leftValue = ignoreCase ? leftLine.toLowerCase() : leftLine;
 		const rightValue = ignoreCase ? rightLine.toLowerCase() : rightLine;

@@ -1,7 +1,7 @@
-export type DiffPartType = "same" | "added" | "removed";
+export type IDiffPartType = "same" | "added" | "removed";
 
-export interface DiffPart {
-	type: DiffPartType;
+export interface IDiffPart {
+	type: IDiffPartType;
 	text: string;
 	leftLine?: number;
 	rightLine?: number;
@@ -9,7 +9,7 @@ export interface DiffPart {
 
 const splitLines = (value: string) => (value ? value.split(/\r?\n/) : []);
 
-export const buildLineDiff = (leftText: string, rightText: string): DiffPart[] => {
+export const buildLineDiff = (leftText: string, rightText: string): IDiffPart[] => {
 	const leftLines = splitLines(leftText);
 	const rightLines = splitLines(rightText);
 	const table = Array.from({ length: leftLines.length + 1 }, () => Array.from({ length: rightLines.length + 1 }, () => 0));
@@ -23,7 +23,7 @@ export const buildLineDiff = (leftText: string, rightText: string): DiffPart[] =
 		}
 	}
 
-	const diffParts: DiffPart[] = [];
+	const diffParts: IDiffPart[] = [];
 	let leftIndex = 0;
 	let rightIndex = 0;
 

@@ -1,4 +1,4 @@
-export type CleanMode = "spaces" | "blank-lines" | "both";
+export type ICleanMode = "spaces" | "blank-lines" | "both";
 
 const normalizeSpaces = (value: string) =>
 	value
@@ -8,7 +8,7 @@ const normalizeSpaces = (value: string) =>
 
 const normalizeBlankLines = (value: string) => value.replace(/(?:\r?\n){2,}/g, "\n");
 
-export const cleanText = (value: string, mode: CleanMode) => {
+export const cleanText = (value: string, mode: ICleanMode) => {
 	if (mode === "spaces") {
 		return normalizeSpaces(value);
 	}

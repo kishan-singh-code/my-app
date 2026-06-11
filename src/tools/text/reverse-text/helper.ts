@@ -1,6 +1,6 @@
-export type ReverseMode = "characters" | "words" | "lines";
+export type IReverseMode = "characters" | "words" | "lines";
 
-export const reverseText = (value: string, mode: ReverseMode) => {
+export const reverseText = (value: string, mode: IReverseMode) => {
 	switch (mode) {
 		case "characters":
 			return Array.from(value).reverse().join("");

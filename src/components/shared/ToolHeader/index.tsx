@@ -1,9 +1,9 @@
 import { ArrowLeftOutlined } from "@ant-design/icons";
 import { Button, Flex, Typography } from "antd";
 import { useNavigate } from "react-router-dom";
-import type { ToolDefinition } from "../../../types/tool";
+import type { IToolDefinition } from "../../../types/toolTypes";
 
-export const ToolHeader = ({ tool }: { tool: ToolDefinition }) => {
+export const ToolHeader = ({ tool }: { tool: IToolDefinition }) => {
 	const navigate = useNavigate();
 
 	return (

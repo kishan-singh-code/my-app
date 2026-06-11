@@ -1,4 +1,4 @@
-export interface TextStats {
+export interface ITextStats {
 	characters: number;
 	charactersNoSpaces: number;
 	words: number;
@@ -8,7 +8,7 @@ export interface TextStats {
 	readingMinutes: number;
 }
 
-export const analyzeText = (value: string): TextStats => {
+export const analyzeText = (value: string): ITextStats => {
 	const trimmedValue = value.trim();
 	const words = trimmedValue.match(/[A-Za-z0-9]+(?:['-][A-Za-z0-9]+)*/g) ?? [];
 	const paragraphs = trimmedValue ? trimmedValue.split(/\n\s*\n/).filter(Boolean).length : 0;

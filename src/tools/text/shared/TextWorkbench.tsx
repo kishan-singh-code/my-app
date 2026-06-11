@@ -5,7 +5,7 @@ import { useCopyToClipboard } from "../../../hooks/useCopyToClipboard";
 
 const { TextArea } = Input;
 
-interface TextWorkbenchProps {
+interface ITextWorkbenchProps {
 	input: string;
 	output: string;
 	onInputChange: (value: string) => void;
@@ -35,15 +35,17 @@ export const TextWorkbench = ({
 	allowOutputEdit = false,
 	onOutputChange,
 	onSwap,
-}: TextWorkbenchProps) => {
+}: ITextWorkbenchProps) => {
 	const copyToClipboard = useCopyToClipboard();
 
 	return (
 		<Space orientation="vertical" size="large" style={{ width: "100%" }}>
 			{controls ? (
-				<Flex wrap="wrap" gap="small">
-					{controls}
-				</Flex>
+				<div style={{ width: "100%", maxWidth: "100%", overflowX: "auto", paddingBottom: 2 }}>
+					<Flex wrap="wrap" gap="small">
+						{controls}
+					</Flex>
+				</div>
 			) : null}
 			{status}
 			<Row gutter={[18, 18]}>

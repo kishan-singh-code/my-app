@@ -1,7 +1,7 @@
 import { Card, Col, Input, List, Row, Space, Tag, Typography } from "antd";
 import { useState } from "react";
 import { ToolContainer } from "../../../components/shared/ToolContainer";
-import { buildLineDiff, type DiffPart } from "./helper";
+import { buildLineDiff, type IDiffPart } from "./helper";
 
 const { TextArea } = Input;
 
@@ -11,7 +11,7 @@ const markerByType = {
 	removed: "-",
 };
 
-const tagColorByType: Record<DiffPart["type"], string> = {
+const tagColorByType: Record<IDiffPart["type"], string> = {
 	same: "default",
 	added: "success",
 	removed: "error",

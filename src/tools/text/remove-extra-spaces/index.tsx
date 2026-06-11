@@ -2,11 +2,11 @@ import { Segmented } from "antd";
 import { useState } from "react";
 import { ToolContainer } from "../../../components/shared/ToolContainer";
 import { TextWorkbench } from "../shared/TextWorkbench";
-import { cleanText, type CleanMode } from "./helper";
+import { cleanText, type ICleanMode } from "./helper";
 
 const RemoveExtraSpaces = () => {
 	const [input, setInput] = useState("This    text\t has extra spaces.\n\n\nAnd too many blank lines.");
-	const [mode, setMode] = useState<CleanMode>("both");
+	const [mode, setMode] = useState<ICleanMode>("both");
 	const output = cleanText(input, mode);
 
 	return (
@@ -23,7 +23,7 @@ const RemoveExtraSpaces = () => {
 							{ label: "Blank Lines", value: "blank-lines" },
 							{ label: "Both", value: "both" },
 						]}
-						onChange={(value) => setMode(value as CleanMode)}
+						onChange={(value) => setMode(value as ICleanMode)}
 					/>
 				}
 				onSwap={() => setInput(output)}

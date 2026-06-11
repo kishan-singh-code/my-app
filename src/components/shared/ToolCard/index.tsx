@@ -1,9 +1,9 @@
 import { ArrowRightOutlined } from "@ant-design/icons";
 import { Card, Flex, Tag, Typography } from "antd";
 import { Link } from "react-router-dom";
-import type { ToolDefinition } from "../../../types/tool";
+import type { IToolDefinition } from "../../../types/toolTypes";
 
-export const ToolCard = ({ tool }: { tool: ToolDefinition }) => {
+export const ToolCard = ({ tool }: { tool: IToolDefinition }) => {
 	return (
 		<Link to={tool.path} style={{ display: "block", height: "100%" }}>
 			<Card hoverable style={{ height: "100%" }}>

@@ -1,20 +1,11 @@
-import { createContext, useCallback, useContext, useState, type ReactNode } from "react";
+import { createContext, useContext, type ReactNode } from "react";
 
-interface AppContextValue {
-	recentToolPaths: string[];
-	trackToolOpen: (path: string) => void;
-}
+interface IAppContextValue {}
 
-const AppContext = createContext<AppContextValue | null>(null);
+const AppContext = createContext<IAppContextValue | null>(null);
 
 export const AppContextProvider = ({ children }: { children: ReactNode }) => {
-	const [recentToolPaths, setRecentToolPaths] = useState<string[]>([]);
-
-	const trackToolOpen = useCallback((path: string) => {
-		setRecentToolPaths((currentPaths) => [path, ...currentPaths.filter((currentPath) => currentPath !== path)].slice(0, 8));
-	}, []);
-
-	return <AppContext.Provider value={{ recentToolPaths, trackToolOpen }}>{children}</AppContext.Provider>;
+	return <AppContext.Provider value={{}}>{children}</AppContext.Provider>;
 };
 
 export const useAppContext = () => {

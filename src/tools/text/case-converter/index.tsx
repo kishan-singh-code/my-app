@@ -2,9 +2,9 @@ import { Segmented } from "antd";
 import { useState } from "react";
 import { ToolContainer } from "../../../components/shared/ToolContainer";
 import { TextWorkbench } from "../shared/TextWorkbench";
-import { convertCase, type CaseMode } from "./helper";
+import { convertCase, type ICaseMode } from "./helper";
 
-const options: { label: string; value: CaseMode }[] = [
+const options: { label: string; value: ICaseMode }[] = [
 	{ label: "Upper", value: "upper" },
 	{ label: "Lower", value: "lower" },
 	{ label: "Title", value: "title" },
@@ -16,7 +16,7 @@ const options: { label: string; value: CaseMode }[] = [
 
 const CaseConverter = () => {
 	const [input, setInput] = useState("The quick brown fox jumps over the lazy dog.");
-	const [mode, setMode] = useState<CaseMode>("upper");
+	const [mode, setMode] = useState<ICaseMode>("upper");
 	const output = convertCase(input, mode);
 
 	return (
@@ -25,7 +25,7 @@ const CaseConverter = () => {
 				input={input}
 				output={output}
 				onInputChange={setInput}
-				controls={<Segmented value={mode} options={options} onChange={(value) => setMode(value)} />}
+				controls={<Segmented value={mode} options={options} onChange={(value) => setMode(value)}/>}
 				onSwap={() => setInput(output)}
 			/>
 		</ToolContainer>
