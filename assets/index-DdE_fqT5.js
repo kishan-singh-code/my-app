@@ -1,0 +1,1 @@
+import{j as r}from"./index-BFX-4Gwo.js";import{F as o}from"./FinanceCalculator-Bsc1KQx9.js";import"./index-BoPLQvFV.js";import"./index-2n3pgpyN.js";import"./AreaChart-BovFrAmh.js";import"./Table-CYhlL23v.js";import"./index-Baw8Jq0d.js";import"./Pagination-BboPEaTn.js";import"./index-CzdBjP68.js";const c=()=>r.jsx(o,{calculatorId:"salary-breakup"});export{c as default};

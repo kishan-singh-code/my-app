@@ -1,0 +1,1 @@
+import{j as r}from"./index-BFX-4Gwo.js";import{U as t}from"./UnitConverter-D7U-ltKf.js";import"./index-BoPLQvFV.js";import"./index-CzdBjP68.js";import"./SwapOutlined-COOBqz0L.js";import"./index-2n3pgpyN.js";import"./Table-CYhlL23v.js";import"./index-Baw8Jq0d.js";import"./Pagination-BboPEaTn.js";const x=()=>r.jsx(t,{converterId:"energy-converter"});export{x as default};
