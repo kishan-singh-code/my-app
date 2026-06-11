@@ -25,7 +25,7 @@ const CaseConverter = () => {
 				input={input}
 				output={output}
 				onInputChange={setInput}
-				controls={<Segmented value={mode} options={options} onChange={(value) => setMode(value)}/>}
+				controls={<Segmented value={mode} options={options} onChange={(value) => setMode(value)} />}
 				onSwap={() => setInput(output)}
 			/>
 		</ToolContainer>
