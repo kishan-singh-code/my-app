@@ -1,0 +1,1 @@
+import{j as t}from"./index-DhFPPOmm.js";import{H as o}from"./HealthFitnessTool-DtDcdAo-.js";import"./index-DyQWaEFW.js";import"./index-BYmqMdJd.js";import"./index-CHgf117j.js";import"./Table-Cngohi9S.js";import"./index-B9kO5Owb.js";import"./Pagination-Txsn9VP8.js";import"./index-Cj0ZNowL.js";const c=()=>t.jsx(o,{toolId:"healthy-weight-calculator"});export{c as default};

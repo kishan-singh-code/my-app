@@ -1,0 +1,1 @@
+import{j as o}from"./index-DhFPPOmm.js";import{H as t}from"./HealthFitnessTool-DtDcdAo-.js";import"./index-DyQWaEFW.js";import"./index-BYmqMdJd.js";import"./index-CHgf117j.js";import"./Table-Cngohi9S.js";import"./index-B9kO5Owb.js";import"./Pagination-Txsn9VP8.js";import"./index-Cj0ZNowL.js";const d=()=>o.jsx(t,{toolId:"body-type-calculator"});export{d as default};

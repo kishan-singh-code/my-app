@@ -1,0 +1,1 @@
+import{j as o}from"./index-DhFPPOmm.js";import{T as r}from"./TimeGlobalTool-BaFkp0Ph.js";import"./index-DyQWaEFW.js";import"./index-BYmqMdJd.js";import"./Table-Cngohi9S.js";import"./index-B9kO5Owb.js";import"./Pagination-Txsn9VP8.js";import"./index-CHgf117j.js";import"./index-Cj0ZNowL.js";const e=()=>o.jsx(r,{toolId:"world-clock"});export{e as default};
